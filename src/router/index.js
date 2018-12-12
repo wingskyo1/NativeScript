@@ -26,6 +26,7 @@ const Register = resolve => {
 const QRcode = resolve => require(['../components/dashboard/QRcode.vue'], resolve)
 const Camera = resolve => require(['../components/dashboard/Camera.vue'], resolve)
 const GPS = resolve => require(['../components/dashboard/GPS.vue'], resolve)
+const Sqlite = resolve => require(['../components/dashboard/Sqlite.vue'], resolve)
 // const Others = resolve => {
 //   require.ensure(['../components/dashboard/Others'],()=> {
 //     resolve(require('../components/dashboard/Others'));
@@ -89,6 +90,14 @@ const router = new VueRouter({
       name:'qrcode',
       meta: {
         title: 'QRcode',
+      },
+    },
+    {
+      path: '/sqlite',
+      component: Sqlite,
+      name:'sqlite',
+      meta: {
+        title: 'Sqlite',
       },
     },
     

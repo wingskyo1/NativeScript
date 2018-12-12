@@ -20,7 +20,8 @@
     "nativescript-ui-sidedrawer": "^4.3.0",
     "nativescript-camera": "^4.1.1",
     "nativescript-permissions": "^1.2.3",
-    "nativescript-barcodescanner": "^2.7.9"
+    "nativescript-barcodescanner": "^2.7.9",
+    "nativescript-sqlite": "^2.2.3"
   },
   "devDependencies": {
     "babel-traverse": "6.26.0",

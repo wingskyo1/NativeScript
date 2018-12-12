@@ -18,7 +18,9 @@
             <Label text="GPS" @tap="goto('gps')" padding="10" backgroundColor="lightgray" />
             <Label text="Camera" @tap="goto('camera')" padding="10" backgroundColor="lightgray" />
             <Label text="QRCode" @tap="goto('qrcode')" padding="10" backgroundColor="lightgray" />
+             <Label text="Sqlite" @tap="goto('Sqlite')" padding="10" backgroundColor="lightgray" />
             <Label class="fa" @tap="makeLogout()" padding="10" >Logout {{ icons.logout| fonticon}}</Label>
+            
           </StackLayout>
         </StackLayout>
 
