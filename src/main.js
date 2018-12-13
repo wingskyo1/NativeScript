@@ -23,7 +23,7 @@ import './assets/css/animate.min.css';
 // });
 
 Vue.registerElement('RadSideDrawer', () => require('nativescript-ui-sidedrawer').RadSideDrawer);
-
+Vue.registerElement("Mapbox", () => require("nativescript-mapbox").MapboxView)
 // Uncomment the following to see NativeScript-Vue output logs
 Vue.config.silent = false;
 

@@ -21,6 +21,13 @@ const Register = resolve => {
     resolve(require('../components/auth/Register'));
   });
 };
+// const GPS = resolve => {
+//   require.ensure(['../components/dashboard/GPS'],()=> {
+//     resolve(require('../components/dashboard/GPS'));
+//   });
+// };
+
+
 //AMD 風格寫法
 //https://zhenyong.github.io/vue-router/advanced/lazy-loading.html
 const QRcode = resolve => require(['../components/dashboard/QRcode.vue'], resolve)
