@@ -1,19 +1,3 @@
-# NativeScript-Vue Application with some ultilities for starting a new app:
-
-* Auth interceptor to redirect to login page when user is not authenticated
-* Auto login and "keep me logged" option
-* Http interceptor to create authenticated routes
-* Loading indicator that start and stop with http requests
-* Side Drawer menu as component with auto naming of views
-* Font icon with filter
-* Global mixin
-* Centralized Router with lazy loading
-* Centralized state manager with Vuex
-* Login, register and home page pre built
-* Toast notifications
-
-# How it works 
-(soon)
 
 
 ## Usage
@@ -38,19 +22,4 @@ npm run watch:<platform>
 npm run clean
 ```
 
-> When invoking the various npm scripts, omitting the platform will attempt to launch `tns` for both platforms, which will only work in a properly configured OSX environment.
 
-For detailed instructions, see https://github.com/nativescript-vue/vue-cli-template
-
-
-# Screenshots
-
-
-Login page                 |  Loading while wait request to finish     |  Register page 
-:-------------------------:|:-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/thiagohagy/nativescriptVueTemplate/master/screenshots/login.png)  |  ![](https://raw.githubusercontent.com/thiagohagy/nativescriptVueTemplate/master/screenshots/loading.png) |  ![](https://raw.githubusercontent.com/thiagohagy/nativescriptVueTemplate/master/screenshots/register.png)
-
-Data list             |  SideDrawer menu with routes and logout
-:-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/thiagohagy/nativescriptVueTemplate/master/screenshots/list.png)  |  ![](https://raw.githubusercontent.com/thiagohagy/nativescriptVueTemplate/master/screenshots/sideDrawer.png)
-"# NativeVuePracting" 
