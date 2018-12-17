@@ -2,8 +2,11 @@
 
 <template>
   <Page class="page">
-    <ActionBar class="action-bar" title="Vue Mapbox Example"></ActionBar>
+     <ActionBar class="action-bar" title="Vue Mapbox ">
+      <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" @tap="$router.push('/home')"/>
+    </ActionBar>
     <GridLayout>
+      
       <Mapbox
         accessToken="pk.eyJ1IjoicHJvbWlzdHJpbyIsImEiOiJjaW1wNmIzaHQwMDJ5d2FtNGNhb28zZTRsIn0.nYE56atkirjFdB5oEkpYVA"
         mapStyle="traffic_day"
@@ -18,7 +21,9 @@
         disableTilt="false"
         @mapReady="onMapReady($event)"
       ></Mapbox>
-     
+      <StackLayout >
+      <TextField v-model="content" />
+      </StackLayout>
     </GridLayout>
     
 
