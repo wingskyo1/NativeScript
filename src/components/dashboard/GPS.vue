@@ -18,11 +18,10 @@
         disableTilt="false"
         @mapReady="onMapReady($event)"
       ></Mapbox>
-      <StackLayout class="hello-world">
-        <TextField v-model="content"/>
-        <!-- <Button class="btn btn-primary" @tap="getLocation()" text="獲取自己的位置"/> -->
-      </StackLayout>
+     
     </GridLayout>
+    
+
   </Page>
 </template>
 
@@ -31,44 +30,41 @@ import Vue from "nativescript-vue";
 //import * as utils from "utils/utils";
 var utils = require("tns-core-modules/utils/utils");
 var mapbox = require("nativescript-mapbox");
+var setColor = require("tns-core-modules/color");
 
 export default {
   data() {
     return {
       address: "222",
-      content: ""
+      content: "",
+      pointArray: []
     };
   },
   methods: {
-    onMapReady(args) {
+    onMapReady: function(args) {
+      var data = this;
+
       args.map.setOnMapClickListener(function(point) {
-        console.log("我點的 " + point.lat);
-        //this.address="123";
+        //remove the draw
+        args.map.removePolylines();
+        //push to pointArray
+        data.pointArray.push(point);
+        data.content = JSON.stringify(point);
+        //reDraw
         args.map.addPolyline({
           id: 1,
-          // color: new color_1.Color("yellow"),
-
-          points: [
-            {
-              lat: point.lat+0.01,
-              lng: point.lng+0.01
-            },
-            {
-              lat: point.lat,
-              lng: point.lng
-            },
-            {
-              lat: point.lat+0.02,
-              lng: point.lng+0.02
-            },
-          ]
+          color: new setColor.Color("green"),
+          points: data.pointArray
         });
         return console.log("Map tapped: " + JSON.stringify(point));
       });
+
       args.map.setOnMapLongClickListener(function(point) {
-        args.map.removePolylines([1]);
+        args.map.removePolylines();
+        data.pointArray.length = 0;
         return console.log("Map longpressed: " + JSON.stringify(point));
       });
+
       args.map.addMarkers([
         {
           lat: 22.610189,
